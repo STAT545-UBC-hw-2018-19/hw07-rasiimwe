@@ -1,4 +1,4 @@
-[<img align ="right" src="https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/logo.png" width="150" height="130"/>](https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/logo.png)
+[<img align ="right" src="https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/logo.png" width="150" height="120"/>](https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/logo.png)
 
 nplots
 ======
