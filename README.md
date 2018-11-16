@@ -1,7 +1,7 @@
+[<img align ="right" src="https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/logo.png" width="100" height="100"/>](https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/logo.png)
 
 nplots
 ======
-[<img align ="right" src="https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/Screen%20Shot%202018-11-15%20at%204.33.49%20PM.png" width="100" height="100"/>](https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/Screen%20Shot%202018-11-15%20at%204.33.49%20PM.png)
 
 [![Build Status](https://travis-ci.org/https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots.svg?branch=master)](https://travis-ci.org/https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots)
 
