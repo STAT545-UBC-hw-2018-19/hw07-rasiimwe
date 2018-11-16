@@ -60,7 +60,7 @@ mp_plot <- mean_lifeExp_cont %>%
   theme(plot.title = element_text(hjust = 0.5))
 ```
 
-The purpose of nplots is to save you the trouble of writing or re-writing the numerous lines of code :point\_up\_2: that generate a plot whenever you need to generate a similar plot.
+The purpose of nplots is to save you the trouble of writing or re-writing the numerous lines of code :point\_up\_2: that generate a plot whenever you need to generate one or a similar plot.
 
 ### Example1: Generating a Scatter plot using `nplots_scatter()`
 
@@ -88,11 +88,11 @@ Getting help
 -   If you are completely new to visualizations using ggplot2 and would like some preliminary tutorials in the application of ggplot2, please visit [Data visualisation with ggplot2](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1) by Rick Scavetta on DataCamp.
 -   Another helpful resource is [The R Graphics Cookbook](http://amzn.to/2dVfMfn) by Winston Chang.
 
--   For more help or inquirues on learning more about visualizations and rendering plots of choice, please visit the friendly [RStudio community](https://community.rstudio.com/).
+-   For more help or inquirues on learning more about visualizations, please visit the friendly [RStudio community](https://community.rstudio.com/).
 
--   [Stack Overflow](http://stackoverflow.com/questions/tagged/ggplot2?sort=frequent&pageSize=50) is another great and vibrant platform for asking questions, getting involved in discussion and providing solutions to other questions asked on the platform. Great place to learn!!
+-   [Stack Overflow](http://stackoverflow.com/questions/tagged/ggplot2?sort=frequent&pageSize=50) is another great and vibrant platform for asking questions, getting involved in discussions and providing solutions to other questions asked on the platform. Great place to learn!!
 
 For Developers
 --------------
 
-nplots is based on the ggplots2 pacakge and was developed to provide plot generation functions without a user worrying about the details of [The Grammar of Graphics](http://amzn.to/2ef1eWp). This is version 0.1.0 and includes two plot types. Future versions will incorporate other plot types like line, box, column e.t.c
+nplots is based on the ggplots2 pacakge and was developed to provide plot generation functions without a user worrying about the details of [The Grammar of Graphics](http://amzn.to/2ef1eWp). This is version 0.1.0 and includes two functions, nplots_scatter() and nplots_violin() to generate scatter and violin plots respectively. Future versions will incorporate other plot types like line, box, column e.t.c
