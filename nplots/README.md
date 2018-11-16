@@ -68,7 +68,7 @@ The purpose of nplots is to save you the trouble of writing or re-writing the nu
 This is a basic example which shows how to create a scatter plot:
 
 ``` r
-nplots_scatter(gapminder, gapminder$lifeExp, gapminder$gdpPercap, xlab="lifeExp", ylab="gdpPercap", title="lifeExp Vs GdpPercap", plotly=FALSE)
+nplots_scatter(gapminder, gapminder$lifeExp, gapminder$gdpPercap, xlab="lifeExp", ylab="gdpPercap", title="lifeExp Vs GdpPercap", plotly=FALSE, alpha=0.19, hjust=0.5)
 ```
 
 ![](README_files/figure-markdown_github/unnamed-chunk-4-1.png)
