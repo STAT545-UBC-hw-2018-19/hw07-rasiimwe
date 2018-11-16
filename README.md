@@ -18,7 +18,7 @@ The released version of nplots is available and can easily be installed from git
 ``` r
 #this is the nplots development version from Github
 install.packages("nplots")
-devtools::install_github("https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots")
+devtools::install_github("STAT545-UBC-students/hw07-rasiimwe/nplots")
 
 #also install the following required packages
 install.packages("gapminder")
