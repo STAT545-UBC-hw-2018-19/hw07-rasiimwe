@@ -95,4 +95,4 @@ Getting help
 For Developers
 --------------
 
-nplots is based on the ggplots2 and was developed to provide plot generation functions without a user worrying about the details of [The Grammar of Graphics](http://amzn.to/2ef1eWp). This is version 0.1.0 and includes two plot types. Future versions will incorporate other plot types like line, box, column e.t.c
+nplots is based on the ggplots2 pacakge and was developed to provide plot generation functions without a user worrying about the details of [The Grammar of Graphics](http://amzn.to/2ef1eWp). This is version 0.1.0 and includes two plot types. Future versions will incorporate other plot types like line, box, column e.t.c
