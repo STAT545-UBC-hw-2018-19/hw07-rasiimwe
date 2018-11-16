@@ -10,7 +10,7 @@ Overview
 
 **nplots** is an R package that generates various plots without you worrying about writing multiple lines of code or the details of the application of the The Grammar of Graphics when creating plots. The background machinery of `nplots` is based off of **ggplot** and takes care of all the code required to generate a plot. All you need to do is specify plot arguments and you are good to go!
 
-`nplots` comes with two preliminary functions, `nplots_scatter()` and `nplots_violin()` that help you generate scatter plots and violin plots respectively. To use these functions, you provide the data, plot aesthetics and arguments like the plot title and x and y labels. You can also specify other parameters like the alpha and hjust values, you can specify whether you would like to have geom\_jitter in a plot or whether you would like the plot converted into plotly!!!
+`nplots` comes with two preliminary functions, `nplots_scatter()` and `nplots_violin()` that help you generate scatter plots and violin plots respectively. To use these functions, you provide the data, plot aesthetics and arguments like the plot title and x and y labels. You can also specify other parameters like the alpha and hjust values, you can specify whether you would like to have geom\_jitter in a plot or whether you would like the plot converted into plotly!!! Please visit [this vignette](https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/vignettes/nplots_vignette.Rmd) on details of usage
 
 Installation
 ------------
