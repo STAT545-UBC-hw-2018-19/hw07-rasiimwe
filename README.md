@@ -2,6 +2,9 @@
 
 nplots
 ======
+[![Build
+Status](https://travis-ci.org/https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots.svg?branch=master)](https://travis-ci.org/https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots)
+
 
 [![Build Status](https://travis-ci.org/https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots.svg?branch=master)](https://travis-ci.org/https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots)
 
