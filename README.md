@@ -1,6 +1,7 @@
 
 nplots
 ======
+[<img align ="right" src="https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/Screen%20Shot%202018-11-15%20at%204.33.49%20PM.png" width="300" height="300"/>](https://github.com/STAT545-UBC-students/hw07-rasiimwe/blob/master/logo/Screen%20Shot%202018-11-15%20at%204.33.49%20PM.png)
 
 [![Build Status](https://travis-ci.org/https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots.svg?branch=master)](https://travis-ci.org/https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots)
 
@@ -18,14 +19,14 @@ The released version of nplots is available and can easily be installed from git
 
 ``` r
 #this is the nplots development version from Github
-#install.packages("nplots")
-#devtools::install_github("https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots")
+install.packages("nplots")
+devtools::install_github("https://github.com/STAT545-UBC-students/hw07-rasiimwe/nplots")
 
 #also install the following required packages
-#install.packages("gapminder")
-#install.packages("ggplot2")
-#install.packages("plotly")
-#install.packages("tidyverse")
+install.packages("gapminder")
+install.packages("ggplot2")
+install.packages("plotly")
+install.packages("tidyverse")
 ```
 
 Load required libraries
