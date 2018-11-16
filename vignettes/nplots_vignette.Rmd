@@ -1,0 +1,144 @@
+---
+title: "Package nplots"
+author: "Rebecca Asiimwe"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Package nplots}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+__Note__: nplots is an R package meant to create various ggplots for you! This package is heavily dependant on [ggplot2](https://github.com/tidyverse/ggplot2) as the background machinery to render ggplots of your choice. It saves you the time of writing multiple lines of code by allowing you specify the kind of plot you want through issuing a few plot arguments.
+
+
+This vignette summarises ways in which nplots can be used and the various arguments it can take. Let's fire away!
+
+
+To use nplots, you will require the following complementary packages:
+
+```{r results='hide', message=FALSE, warning=FALSE}
+#load these packages
+library(nplots)
+library(tidyverse)
+library(gapminder)
+library(plotly)
+library(ggplot2)
+```
+
+If you don't have the above installed, please use the code below to have them installed:
+
+```{r}
+#also install the following required packages
+#install.packages("gapminder")
+#install.packages("ggplot2")
+#install.packages("plotly")
+#install.packages("tidyverse")
+```
+
+## Implementation of funtion:- nplots_scatter()
+
+```{r}
+nplots_scatter <- function(x, x_variable, y_variable, xlab="", ylab="", title="", plotly=TRUE, alpha=0.2, hjust=0.5){
+  
+  if (!requireNamespace("ggplot2", "plotly", "gapminder", "tidyverse", quietly = TRUE)) {
+    stop("Package \"pkg\" needed for this function to work. Please install it.",
+         call. = FALSE)}
+
+  base <- x %>%
+    ggplot(aes(x_variable, y_variable)) +
+    scale_y_log10() +
+    labs(x = xlab, y = ylab) +
+    theme_bw() +
+    ggtitle(title) +
+    theme(plot.title = element_text(hjust = hjust))
+
+
+    if (plotly == "TRUE"){
+      scatter_plot <-  base +
+        geom_point(alpha = alpha) +
+        geom_smooth(method = lm)
+      scatter_plot2 <- ggplotly(scatter_plot)
+      return(scatter_plot2)
+      }
+
+    else if(plotly == "FALSE"){
+      scatter_plot <-  base +
+        geom_point(alpha = alpha) +
+        geom_smooth(method = lm)
+      return(scatter_plot)
+      }
+
+
+  else print ("sorry, I can't provide the plot you specified - please check the plot arguments supplied.")
+}
+
+```
+
+The example usage of the function nplots_scatter function is:
+
+```{r, fig.width=5, fig.height=5}
+nplots_scatter(gapminder, gapminder$lifeExp, gapminder$gdpPercap, xlab="lifeExp", ylab="gdpPercap", title="lifeExp Vs GdpPercap", plotly=FALSE)
+```
+
+ggplot takes on 2 reguired arguments: An object of class __ggplot()__ or a __theme()__. However, we can add more object types. To start,
+
+Function argument x is the __dataset__ to be used
+
+The aesthetic mapping is supplied with __aes()__ and describe how variables in the data are mapped to visual properties (aesthetics) of geoms. variable_x and variable_y provide the list of name value pairs giving aesthetics to map to variables in your dataset.
+
+Given that this is a scatter plot, the layer to be added to this plot is __geom_point()__ by default. 
+
+__scales__ scale_x_continuous() and scale_y_continuous() are the default scales for continuous x and y aesthetics. There are three variants that set the trans argument for commonly used transformations: scale_*_log10(), scale_*_sqrt() and scale_*_reverse()
+
+__labs__ function argument to define x and y lables
+
+__theme__
+
+__ggtitle__
+
+
+
+## Implementation of funtion:- nplots_violin()
+
+```{r}
+nplots_violin <- function(x, y_variable, factor, jitter=TRUE, order=TRUE, xlab="", ylab="", title="", plotly=TRUE, alpha=0.05, hjust=0.5){
+  if (!requireNamespace("ggplot2", "plotly", "gapminder", "tidyverse", quietly = FALSE)) {
+    stop("Package \"pkg\" needed for this function to work. Please install it.",
+         call. = FALSE)}
+
+    if(plotly == TRUE){
+      violin_plot <- x %>%
+        ggplot(aes(reorder(factor, y_variable),y_variable)) +
+        geom_violin() +
+        theme_bw() +
+        geom_jitter(alpha = alpha) +
+        ggtitle(title) +
+        theme(plot.title = element_text(hjust = hjust)) +
+        labs(x = xlab, y = ylab)
+      violin_plot2 <- plotly::ggplotly(violin_plot)
+      return(violin_plot2)
+
+    }
+    else if (plotly == FALSE){
+      violin_plot <- x %>%
+        ggplot(aes(reorder(factor, y_variable),y_variable)) +
+        geom_violin() +
+        theme_bw() +
+        geom_jitter(alpha=alpha) +
+        ggtitle(title) +
+        theme(plot.title = element_text(hjust = hjust)) +
+        labs(x = xlab, y = ylab)
+      return(violin_plot)
+    }
+
+
+  else print ("sorry, I can't provide the plot you specified - please check the plot arguments supplied")
+}
+```
+
+```{r, fig.width=5, fig.height=5}
+nplots_violin(gapminder, gapminder$gdpPercap, gapminder$continent, jitter=TRUE, order=TRUE, xlab="", ylab="gdpPercap", title="gdpPercap across contients", plotly=FALSE, alpha=0.05, hjust=0.6)
+```
+

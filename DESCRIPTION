@@ -1,0 +1,26 @@
+Package: nplots
+Type: Package
+Title: Plot my gg-plot
+Version: 0.1.0
+Authors@R: person("Rebecca", "Asiimwe", email = "rasiimwe@bccrc.ca",
+  role = c("aut", "cre"))
+Description: A convenient way of plotting various plot types based on ggplot2 
+    This version runs and creates scatter and violin plots from ggplot2
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports:
+    dplyr,
+    gapminder,
+    ggplot2,
+    magrittr,
+    plotly,
+    plyr,
+    RColorBrewer,
+    tidyverse
+RoxygenNote: 6.1.0
+Suggests: 
+    testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
